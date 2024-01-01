@@ -19,7 +19,10 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR">
 			<body
-				className={twMerge(inter.className, 'bg-purple-950 text-neutral-300')}
+				className={twMerge(
+					inter.className,
+					'h-screen overflow-hidden text-zinc-300 bg-gradient-to-b from-purple-950 to-black'
+				)}
 			>
 				<Navbar />
 				{children}

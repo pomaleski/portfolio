@@ -10,14 +10,14 @@ export default function Navbar(props: NavbarProps) {
 
 	return (
 		<nav className="flex justify-between p-4 bg-black bg-opacity-5">
-			<span
+			<header
 				className={twMerge(
 					ubuntoMonoFont.className,
 					'text-xl text-white cursor-pointer'
 				)}
 			>
 				Pomaleski
-			</span>
+			</header>
 			<ul className="flex gap-10 text-base cursor-pointer">
 				{tabs.map((name) => (
 					<NavbarItem key={name} item={name} />
