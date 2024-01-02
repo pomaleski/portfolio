@@ -21,7 +21,7 @@ export default function RootLayout({
 			<body
 				className={twMerge(
 					inter.className,
-					'h-screen overflow-hidden text-zinc-300 bg-gradient-to-b from-purple-950 to-black'
+					'min-h-screen text-zinc-300 bg-gradient-to-b from-purple-950 to-black'
 				)}
 			>
 				<Navbar />
