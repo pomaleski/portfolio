@@ -7,8 +7,6 @@ const ubuntoMonoFont = Ubuntu_Mono({ subsets: ['latin'], weight: ['400'] })
 
 interface NavbarProps {}
 export default function Navbar(props: NavbarProps) {
-	const tabs = ['Sobre', 'Projetos', 'Contato']
-
 	return (
 		<nav className="flex justify-between p-4 bg-black bg-opacity-5">
 			<header
@@ -20,9 +18,9 @@ export default function Navbar(props: NavbarProps) {
 				<Link href="/">Pomaleski</Link>
 			</header>
 			<ul className="flex gap-10 text-base cursor-pointer">
-				{tabs.map((name) => (
-					<NavbarItem key={name} item={name} />
-				))}
+				<NavbarItem item={'Sobre'} />
+				<NavbarItem item={'Projetos'} />
+				<NavbarItem item={'Contato'} />
 			</ul>
 		</nav>
 	)
