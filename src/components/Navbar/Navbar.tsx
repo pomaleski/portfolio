@@ -1,6 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import { Ubuntu_Mono } from 'next/font/google'
 import NavbarItem from './NavbarItem'
+import Link from 'next/link'
 
 const ubuntoMonoFont = Ubuntu_Mono({ subsets: ['latin'], weight: ['400'] })
 
@@ -16,7 +17,7 @@ export default function Navbar(props: NavbarProps) {
 					'text-xl text-white cursor-pointer'
 				)}
 			>
-				Pomaleski
+				<Link href="/">Pomaleski</Link>
 			</header>
 			<ul className="flex gap-10 text-base cursor-pointer">
 				{tabs.map((name) => (
