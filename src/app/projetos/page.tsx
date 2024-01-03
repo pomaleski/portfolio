@@ -4,9 +4,13 @@ interface ProjetosProps {}
 export default function Projetos(props: ProjetosProps) {
 	return (
 		<div className="flex flex-col justify-center m-6 mt-10">
-			<h1 className="ms-4 text-4xl text-white font-bold">Projetos</h1>
-			<h2 className="ms-4 mt-10 text-2xl text-white">Principais</h2>
-			<div className="mt-3 grid grid-cols-auto-fill gap-6">
+			<h1 className="ms-4 text-4xl text-white font-bold text-center md:text-start">
+				Projetos
+			</h1>
+			<h2 className="ms-4 mt-10 text-2xl text-white text-center md:text-start">
+				Principais
+			</h2>
+			<div className="mt-3 flex flex-col items-center md:grid grid-cols-auto-fill gap-6">
 				<Card
 					title="spotify-tailwind-clone"
 					description="Spotify clone com Tailwind CSS, React e TypecScript"
@@ -30,8 +34,10 @@ export default function Projetos(props: ProjetosProps) {
 					possimus perferendis? Ea, beatae perferendis!"
 				/>
 			</div>
-			<h2 className="ms-4 mt-10 text-2xl text-white">Todos</h2>
-			<div className="mt-3 grid grid-cols-auto-fill gap-6">
+			<h2 className="ms-4 mt-10 text-2xl text-white text-center md:text-start">
+				Todos
+			</h2>
+			<div className="mt-3 flex flex-col items-center md:grid grid-cols-auto-fill gap-6">
 				<Card
 					title="spotify-tailwind-clone"
 					description="Spotify clone com Tailwind CSS, React e TypecScript"
