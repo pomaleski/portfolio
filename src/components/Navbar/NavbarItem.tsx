@@ -9,7 +9,7 @@ interface NavbarItemProps {
 export default function NavbarItem({ item, active = false }: NavbarItemProps) {
 	return (
 		<li
-			className={`border-white hover:text-white hover:border-b-2 ${
+			className={`p-2 md:p-0 border-white hover:text-white md:hover:border-b-2 cursor-pointer ${
 				active && 'text-white border-b-2'
 			}`}
 		>
