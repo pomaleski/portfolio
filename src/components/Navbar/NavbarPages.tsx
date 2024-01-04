@@ -20,9 +20,9 @@ export default function NavbarPages(props: NavbarPagesProps) {
 					<RxHamburgerMenu size={25} />
 				</button>
 				<ul
-					className={`md:flex flex-col md:flex-row gap-2 md:gap-10 text-base shadow transition-all ${
+					className={`md:flex flex-col md:flex-row gap-2 md:gap-10 text-base transition-all ${
 						openButton
-							? 'flex absolute right-0 top-10 p-4 h-44 rounded-lg bg-black bg-opacity-25'
+							? 'flex absolute right-0 top-10 p-4 h-44 rounded-lg shadow bg-black bg-opacity-25'
 							: 'hidden'
 					}`}
 				>
