@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { FaGithub } from 'react-icons/fa'
+
 export default function Home() {
 	return (
 		<div className="h-[calc(100vh-60px)] flex flex-col lg:flex-row justify-center lg:justify-around items-center px-10 xl:p-0 gap-20">
@@ -7,6 +10,14 @@ export default function Home() {
 				<h2 className="text-lg">Desenvolvedor Web</h2>
 			</div>
 			<div className="w-96 h-96 bg-black rounded-3xl border-2 border-white overflow-hidden"></div>
+			<Link
+				className="flex gap-1 items-center absolute right-5 bottom-5 text-sm hover:underline hover:text-white"
+				href="https://github.com/pomaleski/portfolio"
+				target="_blank"
+			>
+				View on GitHub
+				<FaGithub />
+			</Link>
 		</div>
 	)
 }
