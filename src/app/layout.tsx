@@ -21,11 +21,13 @@ export default function RootLayout({
 			<body
 				className={twMerge(
 					inter.className,
-					'min-h-screen text-zinc-300 bg-gradient-to-b from-purple-950 to-black'
+					'min-h-screen text-zinc-300 bg-gradient-to-tl from-purple-950 to-black'
 				)}
 			>
-				<Navbar />
-				{children}
+				<div className="bg-snow animate-snowy z-0 min-h-dvh">
+					<Navbar />
+					{children}
+				</div>
 			</body>
 		</html>
 	)
