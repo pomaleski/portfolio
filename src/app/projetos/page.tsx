@@ -4,6 +4,7 @@ interface repoProps {
 	name: string
 	description: string
 	html_url: string
+	updated_at: string
 }
 
 interface ProjetosProps {}
@@ -14,7 +15,14 @@ export default async function Projetos(props: ProjetosProps) {
 		},
 	}).then((data) => data.json())
 
-	const pinnedRepos = ['spotify-tailwind-clone', 'petshop']
+	const pinnedRepos = ['petshop', 'spotify-tailwind-clone']
+
+	const sortedRepos = repos.sort((a: repoProps, b: repoProps) => {
+		const dateA = new Date(a.updated_at)
+		const dateB = new Date(b.updated_at)
+
+		return dateB.getTime() - dateA.getTime()
+	})
 
 	return (
 		<div className="flex flex-col justify-center m-6 mt-10">
@@ -25,14 +33,16 @@ export default async function Projetos(props: ProjetosProps) {
 				Principais
 			</h2>
 			<div className="mt-3 flex flex-col items-center md:grid grid-cols-auto-fill gap-6">
-				{pinnedRepos.map((name: string) => {
-					const repo = repos.find((repo: repoProps) => repo.name === name)
+				{pinnedRepos.map((repoName: string) => {
+					const { name, description, html_url } = repos.find(
+						({ name }: repoProps) => name === repoName
+					)
 					return (
 						<Card
-							key={`pinned-${repo.name}`}
-							title={repo.name}
-							description={repo.description}
-							link={repo.html_url}
+							key={`pinned-${name}`}
+							title={name}
+							description={description}
+							link={html_url}
 						/>
 					)
 				})}
@@ -41,13 +51,13 @@ export default async function Projetos(props: ProjetosProps) {
 				Todos
 			</h2>
 			<div className="mt-3 flex flex-col items-center md:grid grid-cols-auto-fill gap-6">
-				{repos.map((repo: repoProps) => {
+				{sortedRepos.map(({ name, description, html_url }: repoProps) => {
 					return (
 						<Card
-							key={repo.name}
-							title={repo.name}
-							description={repo.description}
-							link={repo.html_url}
+							key={name}
+							title={name}
+							description={description}
+							link={html_url}
 						/>
 					)
 				})}
