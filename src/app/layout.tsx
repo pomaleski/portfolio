@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { twMerge } from 'tailwind-merge'
 import Navbar from '@/components/Navbar/Navbar'
+import SnowAnimation from '@/components/SnowAnimation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,10 +25,10 @@ export default function RootLayout({
 					'min-h-screen text-zinc-300 bg-gradient-to-tl from-purple-950 to-black'
 				)}
 			>
-				<div className="bg-snow animate-snowy z-0 min-h-dvh">
+				<SnowAnimation>
 					<Navbar />
 					{children}
-				</div>
+				</SnowAnimation>
 			</body>
 		</html>
 	)
