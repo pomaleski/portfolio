@@ -27,7 +27,7 @@ export default function RootLayout({
 			>
 				<SnowAnimation>
 					<Navbar />
-					{children}
+					<div className="min-h-[calc(100vh-60px-36px)]">{children}</div>
 				</SnowAnimation>
 			</body>
 		</html>

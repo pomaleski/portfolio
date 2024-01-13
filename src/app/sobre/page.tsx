@@ -4,7 +4,7 @@ interface SobreProps {}
 
 export default function Sobre(props: SobreProps) {
 	return (
-		<div className="flex flex-col items-center m-6 mt-10 text-center">
+		<div className="flex flex-col items-center px-6 pt-10 text-center">
 			<h1 className="text-4xl text-white font-bold">Sobre</h1>
 			<div className="mt-10 mx-10 md:mx-32 lg:mx-56 xl:mx-96 text-lg flex flex-col gap-8">
 				<div>
