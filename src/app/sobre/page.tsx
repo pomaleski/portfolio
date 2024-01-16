@@ -11,9 +11,9 @@ export default function Sobre(props: SobreProps) {
 					<h2 className="text-2xl text-white">Resumo</h2>
 					<div className="mt-4 text-base md:text-lg">
 						Estou em busca do primeiro emprego. Comecei a estudar programação em
-						2022, fazendo um curso profisionalizante, e gostei muito, atualmente
+						2022, fazendo um curso profissionalizante, e gostei muito, atualmente
 						estou cursando Ciência da Computação e aprimorando meu conhecimento
-						em React e TypeScript. Prentendo também estudar Rust ou Java.
+						em React e TypeScript. Pretendo também estudar Rust ou Java.
 					</div>
 				</div>
 				<div>
