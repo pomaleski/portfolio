@@ -22,7 +22,7 @@ export default function RootLayout({
 			<body
 				className={twMerge(
 					inter.className,
-					'min-h-screen text-zinc-300 bg-gradient-to-tl from-purple-950 to-black'
+					'min-h-auto sm:min-h-screen overflow-x-hidden text-zinc-300 bg-gradient-to-tl from-purple-950 to-black'
 				)}
 			>
 				<SnowAnimation>

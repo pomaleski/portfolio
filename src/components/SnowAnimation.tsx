@@ -17,7 +17,7 @@ export default function SnowAnimation({ children }: SnowAnimationProps) {
 	return (
 		<div className={`${isActive && 'bg-snow animate-snowy'} z-0 min-h-dvh`}>
 			{children}
-			<div className="sticky left-0 bottom-0 w-44 bg-black rounded p-2 flex items-center justify-center gap-2 text-xs">
+			<div className="sticky left-0 bottom-0 w-44 bg-black rounded p-2 flex items-center gap-2 text-xs">
 				<ToggleButton text="Desativar Animação" onClickHandle={handleClick} />
 			</div>
 		</div>

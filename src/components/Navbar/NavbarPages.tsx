@@ -22,7 +22,7 @@ export default function NavbarPages(props: NavbarPagesProps) {
 				<ul
 					className={`md:flex flex-col md:flex-row gap-2 md:gap-10 text-base transition-all ${
 						openButton
-							? 'flex absolute right-0 top-10 p-4 h-44 rounded-lg shadow bg-black bg-opacity-25'
+							? 'flex absolute right-0 top-10 p-4 h-44 rounded-lg shadow bg-black'
 							: 'hidden'
 					}`}
 				>
