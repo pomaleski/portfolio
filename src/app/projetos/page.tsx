@@ -1,5 +1,8 @@
 import Card from '@/components/Card'
 
+export const revalidate = 60 * 60 // 1 hour
+export const dynamic = 'force-dynamic'
+
 interface repoProps {
 	name: string
 	description: string
@@ -7,13 +10,18 @@ interface repoProps {
 	updated_at: string
 }
 
+async function getRepos() {
+	const url = 'https://api.github.com/users/pomaleski/repos'
+	const res = await fetch(url, { next: { revalidate: 60 * 60 /* 1 hour */ } })
+	const data = await res.json()
+
+	return data
+}
+
 interface ProjetosProps {}
+
 export default async function Projetos(props: ProjetosProps) {
-	const repos = await fetch('https://api.github.com/users/pomaleski/repos', {
-		next: {
-			revalidate: 60 * 60 * 24, // 1 day
-		},
-	}).then((data) => data.json())
+	const repos = await getRepos()
 
 	const pinnedRepos = ['petshop', 'spotify-tailwind-clone']
 
